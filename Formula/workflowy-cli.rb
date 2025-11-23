@@ -8,7 +8,7 @@ class WorkflowyCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/workflowy"
+    system "go", "build", *std_go_args(output: bin/"workflowy", ldflags: "-s -w"), "./cmd/workflowy"
   end
 
   test do
