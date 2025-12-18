@@ -5,21 +5,21 @@
 class WorkflowyCli < Formula
   desc "CLI for Workflowy with crud operations and usage reports"
   homepage "https://github.com/mholzen/workflowy"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mholzen/workflowy/releases/download/v0.3.0/workflowy_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "9715088d6bdca2918bcef2a8dd0d3aaf960eb3e5b2f98e5607e557c73d21743d"
+      url "https://github.com/mholzen/workflowy/releases/download/v0.4.0/workflowy_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "69c0fb1cab928b889891f28307024ecb893f80fa2ee0abe79d2f574571fa69c3"
 
       def install
         bin.install "workflowy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mholzen/workflowy/releases/download/v0.3.0/workflowy_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "1ee34c98c335479d06ffa4579a40e86bb7f62eaf51289b7fe8c96af87975ad41"
+      url "https://github.com/mholzen/workflowy/releases/download/v0.4.0/workflowy_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "ce68eee74583e25290a37ed298e2c6742fa1179568bc830859765455be075311"
 
       def install
         bin.install "workflowy"
@@ -29,15 +29,15 @@ class WorkflowyCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mholzen/workflowy/releases/download/v0.3.0/workflowy_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "3dc2f7280c53dbeb81544b7d09eaa6c89c79bfad123595ce1064b5d6cc204232"
+      url "https://github.com/mholzen/workflowy/releases/download/v0.4.0/workflowy_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "f86e21b62ce6ef1e40dc87b0cc89b74861af7c82b7fc72e5ee8e5d2f04667d00"
       def install
         bin.install "workflowy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mholzen/workflowy/releases/download/v0.3.0/workflowy_0.3.0_Linux_arm64.tar.gz"
-      sha256 "8035e70b40482d5682da78bec3c884327dc8694d2886c674cb8adab32e4fabab"
+      url "https://github.com/mholzen/workflowy/releases/download/v0.4.0/workflowy_0.4.0_Linux_arm64.tar.gz"
+      sha256 "5f85108a12d172f7b5b8a320e68ac363d9c2e89b068cb55825a1d54208cb05a2"
       def install
         bin.install "workflowy"
       end
